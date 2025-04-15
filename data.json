@@ -1,0 +1,157 @@
+
+{
+  "boxes": [
+    {
+      "id": "1",
+      "category": "marketing",
+      "title": "Social Media Toolkit",
+      "logo": "/img/social-media-logo.png",
+      "description": "Everything you need to manage your social media presence. Includes templates, scheduling tools, and analytics dashboards.",
+      "buttons": [
+        {
+          "text": "View Details",
+          "url": "https://example.com/social-media",
+          "color": "primary"
+        },
+        {
+          "text": "Download",
+          "url": "https://example.com/download/social",
+          "color": "secondary"
+        },
+        {
+          "text": "Documentation",
+          "url": "https://example.com/docs/social",
+          "color": "tertiary"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "category": "development",
+      "title": "Frontend Framework",
+      "logo": "/img/frontend-logo.png",
+      "description": "A lightweight, responsive frontend framework for building modern web applications. Compatible with all major browsers.",
+      "buttons": [
+        {
+          "text": "GitHub",
+          "url": "https://github.com/example/frontend",
+          "color": "primary"
+        },
+        {
+          "text": "Documentation",
+          "url": "https://example.com/docs/frontend",
+          "color": "secondary"
+        },
+        {
+          "text": "Demos",
+          "url": "https://example.com/demos/frontend",
+          "color": "tertiary"
+        },
+        {
+          "text": "Support",
+          "url": "https://example.com/support/frontend",
+          "color": "quaternary"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "category": "design",
+      "title": "UI Component Library",
+      "logo": "/img/design-logo.png",
+      "description": "A comprehensive library of UI components for creating consistent, accessible interfaces. Includes dark mode support.",
+      "buttons": [
+        {
+          "text": "Browse Components",
+          "url": "https://example.com/components",
+          "color": "primary"
+        },
+        {
+          "text": "Figma Kit",
+          "url": "https://example.com/figma",
+          "color": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "category": "marketing",
+      "title": "Email Campaign Manager",
+      "logo": "/img/email-logo.png",
+      "description": "Design, schedule, and analyze your email marketing campaigns with our intuitive tools.",
+      "buttons": [
+        {
+          "text": "Try Demo",
+          "url": "https://example.com/email/demo",
+          "color": "primary"
+        },
+        {
+          "text": "Templates",
+          "url": "https://example.com/email/templates",
+          "color": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "category": "development",
+      "title": "Backend API Service",
+      "description": "Scalable backend service with RESTful API endpoints for your applications.",
+      "buttons": [
+        {
+          "text": "API Docs",
+          "url": "https://example.com/api/docs",
+          "color": "primary"
+        },
+        {
+          "text": "Sign Up",
+          "url": "https://example.com/api/signup",
+          "color": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "category": "design",
+      "title": "Icon Pack",
+      "logo": "/img/icons-logo.png",
+      "buttons": [
+        {
+          "text": "Download Pack",
+          "url": "https://example.com/icons/download",
+          "color": "primary"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "category": "analytics",
+      "title": "Dashboard Tools",
+      "logo": "/img/analytics-logo.png",
+      "description": "Create custom analytics dashboards with our drag-and-drop interface. Connects to all major data sources.",
+      "buttons": [
+        {
+          "text": "View Demo",
+          "url": "https://example.com/analytics/demo",
+          "color": "primary"
+        },
+        {
+          "text": "Pricing",
+          "url": "https://example.com/analytics/pricing",
+          "color": "secondary"
+        },
+        {
+          "text": "Case Studies",
+          "url": "https://example.com/analytics/cases",
+          "color": "tertiary"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "category": "analytics",
+      "title": "Report Generator",
+      "description": "Automatically generate beautiful, comprehensive reports from your data sources."
+    }
+  ]
+}
