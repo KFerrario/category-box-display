@@ -1,3 +1,4 @@
+
 # Category Box Display
 
 A simple content management single-page application that displays content in a box design with category filtering.
