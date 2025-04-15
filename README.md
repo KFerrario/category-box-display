@@ -1,73 +1,102 @@
-# Welcome to your Lovable project
+# Category Box Display
 
-## Project info
+A simple content management single-page application that displays content in a box design with category filtering.
 
-**URL**: https://lovable.dev/projects/cfdaccca-9c90-4588-b321-de68ba946414
+## Features
 
-## How can I edit this code?
+- Content loaded dynamically from a JSON file
+- Category-based filtering via top navigation bar
+- Each content box displays:
+  - Optional black and white logo
+  - Optional description (2-3 sentences)
+  - Up to four buttons with different colors (hidden if not provided)
+- Built with React, TypeScript, and Tailwind CSS
+- Easily deployable to GitHub Pages
 
-There are several ways of editing your application.
+## Getting Started
 
-**Use Lovable**
+1. Clone this repository
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Start the development server:
+   ```
+   npm run dev
+   ```
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/cfdaccca-9c90-4588-b321-de68ba946414) and start prompting.
+## Customizing Content
 
-Changes made via Lovable will be committed automatically to this repo.
+All content is stored in the `public/data.json` file. You can modify this file to update the content displayed on the page.
 
-**Use your preferred IDE**
+### JSON Structure
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```json
+{
+  "boxes": [
+    {
+      "id": "unique-id",
+      "category": "category-name",
+      "title": "Box Title",
+      "logo": "/img/logo-filename.png",
+      "description": "Short description of the box content (2-3 sentences).",
+      "buttons": [
+        {
+          "text": "Button Text",
+          "url": "https://example.com/link-url",
+          "color": "primary"
+        }
+      ]
+    }
+  ]
+}
 ```
 
-**Edit a file directly in GitHub**
+### Fields
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- `id`: Unique identifier for the box (required)
+- `category`: Category for filtering (required)
+- `title`: Title of the box (required)
+- `logo`: Path to black and white logo image (optional)
+- `description`: Short description text (optional)
+- `buttons`: Array of button objects (optional)
+  - `text`: Button text (required)
+  - `url`: Button link URL (required)
+  - `color`: Button color (required, options: "primary", "secondary", "tertiary", "quaternary")
 
-**Use GitHub Codespaces**
+## Adding Images
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Place your black and white logo images in the `public/img/` directory, then reference them in the data.json file.
 
-## What technologies are used for this project?
+## Deployment to GitHub Pages
 
-This project is built with:
+1. The `vite.config.ts` file has already been configured with `base: './'` for GitHub Pages compatibility.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+2. Build the project:
+```
+npm run build
+```
 
-## How can I deploy this project?
+3. Deploy to GitHub Pages by pushing the `dist` folder to the `gh-pages` branch:
 
-Simply open [Lovable](https://lovable.dev/projects/cfdaccca-9c90-4588-b321-de68ba946414) and click on Share -> Publish.
+   If you have the gh-pages package installed:
+   ```
+   npx gh-pages -d dist
+   ```
 
-## Can I connect a custom domain to my Lovable project?
+   Or manually:
+   ```
+   git add dist -f
+   git commit -m "Deploy to GitHub Pages"
+   git subtree push --prefix dist origin gh-pages
+   ```
 
-Yes, you can!
+4. Wait a few minutes, then access your site at `https://[your-username].github.io/[repository-name]/`
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Customization
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+You can customize the appearance of the boxes and buttons by modifying the `src/pages/Index.tsx` file and the Tailwind CSS classes.
+
+## License
+
+MIT
