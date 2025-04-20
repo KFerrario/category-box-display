@@ -9,6 +9,13 @@ interface ButtonLink {
   color: string;
 }
 
+interface Modal {
+  title: string;
+  content: string;
+  linkText: string;
+  linkUrl: string;
+}
+
 interface ContentBoxData {
   id: string;
   category: string;
@@ -16,6 +23,7 @@ interface ContentBoxData {
   logo?: string;
   description?: string;
   buttons?: ButtonLink[];
+  modal?: Modal;
 }
 
 const Index = () => {
@@ -97,6 +105,7 @@ const Index = () => {
                   logo={box.logo}
                   description={box.description}
                   buttons={box.buttons}
+                  modal={box.modal}
                 />
               ))}
           </div>

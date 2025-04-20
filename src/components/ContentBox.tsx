@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -62,14 +63,16 @@ export function ContentBox({ id, title, logo, description, buttons, modal }: Con
           )}
           
           <div className="mt-auto pt-4 flex flex-wrap gap-2">
-            {modal ? (
+            {modal && (
               <Button 
                 className="bg-purple-600 hover:bg-purple-700 text-white"
                 onClick={() => setIsModalOpen(true)}
               >
                 Learn More
               </Button>
-            ) : buttons && buttons.length > 0 && (
+            )}
+            
+            {buttons && buttons.length > 0 && (
               buttons.map((button, index) => (
                 <a 
                   key={index} 
