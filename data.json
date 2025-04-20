@@ -1,4 +1,3 @@
-
 {
   "boxes": [
     {
@@ -7,23 +6,12 @@
       "title": "Social Media Toolkit",
       "logo": "/img/social-media-logo.png",
       "description": "Everything you need to manage your social media presence. Includes templates, scheduling tools, and analytics dashboards.",
-      "buttons": [
-        {
-          "text": "View Details",
-          "url": "https://example.com/social-media",
-          "color": "primary"
-        },
-        {
-          "text": "Download",
-          "url": "https://example.com/download/social",
-          "color": "secondary"
-        },
-        {
-          "text": "Documentation",
-          "url": "https://example.com/docs/social",
-          "color": "tertiary"
-        }
-      ]
+      "modal": {
+        "title": "Social Media Toolkit Details",
+        "content": "Our comprehensive social media toolkit provides everything you need to succeed in your social media marketing efforts. Get access to premium templates, advanced scheduling tools, and detailed analytics dashboards.",
+        "linkText": "Access Toolkit",
+        "linkUrl": "https://example.com/social-media"
+      }
     },
     {
       "id": "2",
