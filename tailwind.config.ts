@@ -1,8 +1,9 @@
+
 import type { Config } from "tailwindcss";
 
 // Create our own simple animation plugin that doesn't rely on tailwindcss/plugin
 const animatePlugin = {
-  handler: function({ addUtilities, matchUtilities, theme }: any) {
+  handler: function({ addUtilities }: any) {
     addUtilities({
       ".animate-accordion-down": {
         animation: "accordion-down 0.2s ease-out",
@@ -23,6 +24,10 @@ export default {
     "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
+  // Explicitly disable preflight to avoid the missing file issue
+  corePlugins: {
+    preflight: false,
+  },
   theme: {
     container: {
       center: true,
