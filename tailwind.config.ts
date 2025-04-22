@@ -1,6 +1,18 @@
-
 import type { Config } from "tailwindcss";
-import animate from "tailwindcss-animate";
+
+// Create our own simple animation plugin that doesn't rely on tailwindcss/plugin
+const animatePlugin = {
+  handler: function({ addUtilities, matchUtilities, theme }: any) {
+    addUtilities({
+      ".animate-accordion-down": {
+        animation: "accordion-down 0.2s ease-out",
+      },
+      ".animate-accordion-up": {
+        animation: "accordion-up 0.2s ease-out",
+      },
+    });
+  }
+};
 
 export default {
   darkMode: ["class"],
@@ -94,5 +106,5 @@ export default {
       }
     }
   },
-  plugins: [animate],
+  plugins: [animatePlugin],
 } satisfies Config;
